@@ -82,7 +82,7 @@ public class LibroRepository implements Repository<Libro> {
 
     }
     public void saveAll(){
-        // serializacion guarda el objecto en un archivo
+        // serializacion guarda el objecto en un archivo mediante el try
            try(ObjectOutputStream oos = new ObjectOutputStream (new FileOutputStream (filePath)) ){
                oos.writeObject(libros);
                System.out.println("objecto serializado"+ libros);
